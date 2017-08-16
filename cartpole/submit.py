@@ -19,6 +19,7 @@ import sys
 import env_wrapper
 import getpass
 import conf
+from __future__ import print_function
 
 FLAGS = flags.FLAGS
 
@@ -191,7 +192,7 @@ def main(unused_argv):
           observation = env.reset()
           done = False
 
-      print ""
+      print("")
       logging.info('Total reward: %d, Avg reward: %f' % (running_reward_sum, running_reward_sum / total_episodes))
 
       avg_reward_sum = running_reward_sum / total_episodes
